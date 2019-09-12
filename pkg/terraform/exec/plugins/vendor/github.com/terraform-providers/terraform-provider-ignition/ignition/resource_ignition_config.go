@@ -11,12 +11,12 @@ import (
 
 var configReferenceResource = &schema.Resource{
 	Schema: map[string]*schema.Schema{
-		"source": {
+		"source": &schema.Schema{
 			Type:     schema.TypeString,
 			ForceNew: true,
 			Required: true,
 		},
-		"verification": {
+		"verification": &schema.Schema{
 			Type:     schema.TypeString,
 			ForceNew: true,
 			Optional: true,
@@ -24,75 +24,75 @@ var configReferenceResource = &schema.Resource{
 	},
 }
 
-func dataSourceConfig() *schema.Resource {
+func resourceConfig() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceIgnitionFileExists,
 		Read:   resourceIgnitionFileRead,
 		Schema: map[string]*schema.Schema{
-			"disks": {
+			"disks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"arrays": {
+			"arrays": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"filesystems": {
+			"filesystems": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"files": {
+			"files": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"directories": {
+			"directories": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"links": {
+			"links": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"systemd": {
+			"systemd": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"networkd": {
+			"networkd": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"users": {
+			"users": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"groups": {
+			"groups": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"replace": {
+			"replace": &schema.Schema{
 				Type:     schema.TypeList,
 				ForceNew: true,
 				Optional: true,
 				MaxItems: 1,
 				Elem:     configReferenceResource,
 			},
-			"append": {
+			"append": &schema.Schema{
 				Type:     schema.TypeList,
 				ForceNew: true,
 				Optional: true,
 				Elem:     configReferenceResource,
 			},
-			"rendered": {
+			"rendered": &schema.Schema{
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -217,9 +217,9 @@ func buildStorage(d *schema.ResourceData, c *cache) (types.Storage, error) {
 		if id == nil {
 			continue
 		}
-		d, err := c.getDisk(id.(string))
-		if err != nil {
-			return storage, fmt.Errorf("invalid disk %q, failed to get disk id: %v", id, err)
+		d, ok := c.disks[id.(string)]
+		if !ok {
+			return storage, fmt.Errorf("invalid disk %q, unknown disk id", id)
 		}
 
 		storage.Disks = append(storage.Disks, *d)
@@ -229,9 +229,9 @@ func buildStorage(d *schema.ResourceData, c *cache) (types.Storage, error) {
 		if id == nil {
 			continue
 		}
-		a, err := c.getRaid(id.(string))
-		if err != nil {
-			return storage, fmt.Errorf("invalid raid %q, failed to get disk id: %v", id, err)
+		a, ok := c.arrays[id.(string)]
+		if !ok {
+			return storage, fmt.Errorf("invalid raid %q, unknown raid id", id)
 		}
 
 		storage.Raid = append(storage.Raid, *a)
@@ -241,9 +241,9 @@ func buildStorage(d *schema.ResourceData, c *cache) (types.Storage, error) {
 		if id == nil {
 			continue
 		}
-		f, err := c.getFilesystem(id.(string))
-		if err != nil {
-			return storage, fmt.Errorf("invalid filesystem %q, failed to get filesystem id: %v", id, err)
+		f, ok := c.filesystems[id.(string)]
+		if !ok {
+			return storage, fmt.Errorf("invalid filesystem %q, unknown filesystem id", id)
 		}
 
 		storage.Filesystems = append(storage.Filesystems, *f)
@@ -253,9 +253,9 @@ func buildStorage(d *schema.ResourceData, c *cache) (types.Storage, error) {
 		if id == nil {
 			continue
 		}
-		f, err := c.getFile(id.(string))
-		if err != nil {
-			return storage, fmt.Errorf("invalid file %q, failed to get file id: %v", id, err)
+		f, ok := c.files[id.(string)]
+		if !ok {
+			return storage, fmt.Errorf("invalid file %q, unknown file id", id)
 		}
 
 		storage.Files = append(storage.Files, *f)
@@ -265,9 +265,9 @@ func buildStorage(d *schema.ResourceData, c *cache) (types.Storage, error) {
 		if id == nil {
 			continue
 		}
-		f, err := c.getDirectory(id.(string))
-		if err != nil {
-			return storage, fmt.Errorf("invalid file %q, failed to get directory id: %v", id, err)
+		f, ok := c.directories[id.(string)]
+		if !ok {
+			return storage, fmt.Errorf("invalid file %q, unknown directory id", id)
 		}
 
 		storage.Directories = append(storage.Directories, *f)
@@ -277,9 +277,9 @@ func buildStorage(d *schema.ResourceData, c *cache) (types.Storage, error) {
 		if id == nil {
 			continue
 		}
-		f, err := c.getLink(id.(string))
-		if err != nil {
-			return storage, fmt.Errorf("invalid file %q, failed to get link id: %v", id, err)
+		f, ok := c.links[id.(string)]
+		if !ok {
+			return storage, fmt.Errorf("invalid file %q, unknown link id", id)
 		}
 
 		storage.Links = append(storage.Links, *f)
@@ -297,9 +297,9 @@ func buildSystemd(d *schema.ResourceData, c *cache) (types.Systemd, error) {
 			continue
 		}
 
-		u, err := c.getSystemdUnit(id.(string))
-		if err != nil {
-			return systemd, fmt.Errorf("invalid systemd unit %q, failed to get systemd unit id: %v", id, err)
+		u, ok := c.systemdUnits[id.(string)]
+		if !ok {
+			return systemd, fmt.Errorf("invalid systemd unit %q, unknown systemd unit id", id)
 		}
 
 		systemd.Units = append(systemd.Units, *u)
@@ -317,9 +317,9 @@ func buildNetworkd(d *schema.ResourceData, c *cache) (types.Networkd, error) {
 			continue
 		}
 
-		u, err := c.getNetworkdunit(id.(string))
-		if err != nil {
-			return networkd, fmt.Errorf("invalid networkd unit %q, failed to get networkd unit id: %v", id, err)
+		u, ok := c.networkdUnits[id.(string)]
+		if !ok {
+			return networkd, fmt.Errorf("invalid networkd unit %q, unknown networkd unit id", id)
 		}
 
 		networkd.Units = append(networkd.Units, *u)
@@ -336,9 +336,9 @@ func buildPasswd(d *schema.ResourceData, c *cache) (types.Passwd, error) {
 			continue
 		}
 
-		u, err := c.getUser(id.(string))
-		if err != nil {
-			return passwd, fmt.Errorf("invalid user %q, failed to get user id: %v", id, err)
+		u, ok := c.users[id.(string)]
+		if !ok {
+			return passwd, fmt.Errorf("invalid user %q, unknown user id", id)
 		}
 
 		passwd.Users = append(passwd.Users, *u)
@@ -349,9 +349,9 @@ func buildPasswd(d *schema.ResourceData, c *cache) (types.Passwd, error) {
 			continue
 		}
 
-		g, err := c.getGroup(id.(string))
-		if err != nil {
-			return passwd, fmt.Errorf("invalid group %q, failed to get group id: %v", id, err)
+		g, ok := c.groups[id.(string)]
+		if !ok {
+			return passwd, fmt.Errorf("invalid group %q, unknown group id", id)
 		}
 
 		passwd.Groups = append(passwd.Groups, *g)

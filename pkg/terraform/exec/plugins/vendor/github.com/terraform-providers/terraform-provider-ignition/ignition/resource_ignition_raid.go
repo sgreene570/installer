@@ -5,28 +5,28 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceRaid() *schema.Resource {
+func resourceRaid() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceRaidExists,
 		Read:   resourceRaidRead,
 		Schema: map[string]*schema.Schema{
-			"name": {
+			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"level": {
+			"level": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"devices": {
+			"devices": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				ForceNew: true,
 				Elem:     &schema.Schema{Type: schema.TypeString},
 			},
-			"spares": {
+			"spares": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,
