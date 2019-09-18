@@ -20,6 +20,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/dimchansky/utfbom v1.1.0
 	github.com/dmacvicar/terraform-provider-libvirt v0.5.2
+	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/dustinkirkland/golang-petname v0.0.0-20170921220637-d3c2ba80e75e
 	github.com/gammazero/deque v0.0.0-20190521012701-46e4ffb7a622
 	github.com/gammazero/workerpool v0.0.0-20190608213748-0ed5e40ec55e
@@ -28,7 +29,7 @@ require (
 	github.com/google/btree v1.0.0
 	github.com/google/gofuzz v0.0.0-20170612174753-24818f796faf
 	github.com/google/uuid v1.1.1
-	github.com/googleapis/gax-go v1.0.3
+	github.com/googleapis/gax-go v2.0.0+incompatible
 	github.com/gophercloud/gophercloud v0.0.0-20190509032623-7892efa714f1
 	github.com/gophercloud/utils v0.0.0-20190313033024-0bcc8e728cb5
 	github.com/grpc-ecosystem/grpc-gateway v1.8.5
@@ -36,45 +37,49 @@ require (
 	github.com/hashicorp/errwrap v1.0.0
 	github.com/hashicorp/go-azure-helpers v0.4.1
 	github.com/hashicorp/go-cleanhttp v0.5.1
-	github.com/hashicorp/go-getter v1.2.0
+	github.com/hashicorp/go-getter v1.3.0
 	github.com/hashicorp/go-multierror v1.0.0
 	github.com/hashicorp/go-uuid v1.0.1
-	github.com/hashicorp/go-version v1.1.0
+	github.com/hashicorp/go-version v1.2.0
 	github.com/hashicorp/golang-lru v0.5.1
+	github.com/hashicorp/packer v1.3.5
 	github.com/hooklift/iso9660 v1.0.0
 	github.com/jen20/awspolicyequivalence v1.0.0
 	github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af
-	github.com/kubernetes-sigs/aws-iam-authenticator v0.0.0-20181018224716-b4db1968bf8e
+	github.com/kr/pty v1.1.3 // indirect
+	github.com/kubernetes-sigs/aws-iam-authenticator v0.3.1-0.20181019024009-82544ec86140
 	github.com/libvirt/libvirt-go-xml v5.1.0+incompatible
 	github.com/marstr/guid v1.1.0
 	github.com/mitchellh/copystructure v1.0.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/hashstructure v1.0.0
 	github.com/mitchellh/mapstructure v1.1.2
-	github.com/mitchellh/packer v1.3.5
 	github.com/mitchellh/reflectwalk v1.0.0
 	github.com/openshift-metal3/terraform-provider-ironic v0.1.7
 	github.com/petar/GoLLRB v0.0.0-20130427215148-53be0d36a84c
-	github.com/peterbourgon/diskv v0.0.0-20190425080511-0be1b92a6df0
+	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
+	github.com/prometheus/client_golang v0.9.3-0.20190127221311-3c4408c8b829 // indirect
 	github.com/satori/go.uuid v1.2.0
 	github.com/satori/uuid v1.2.0
+	github.com/smartystreets/assertions v0.0.0-20190116191733-b6c0e53d7304 // indirect
 	github.com/stoewer/go-strcase v1.0.2
 	github.com/terraform-providers/terraform-provider-aws v0.0.0-20190510001811-4b894dbf13f6
 	github.com/terraform-providers/terraform-provider-azurerm v1.27.1
 	github.com/terraform-providers/terraform-provider-google v0.0.0-20190604190225-5550fc28ca27
-	github.com/terraform-providers/terraform-provider-ignition v0.0.0-20190513232748-18ce0b36dae1
+	github.com/terraform-providers/terraform-provider-ignition v1.0.1
 	github.com/terraform-providers/terraform-provider-local v1.2.1
-	github.com/terraform-providers/terraform-provider-openstack v0.0.0-20190515162737-b1406b8e4894
-	github.com/terraform-providers/terraform-provider-random v0.0.0-20190412001523-3e67922aa0c6
+	github.com/terraform-providers/terraform-provider-openstack v1.15.0
+	github.com/terraform-providers/terraform-provider-random v2.0.0+incompatible
 	github.com/vincent-petithory/dataurl v0.0.0-20160330182126-9a301d65acbb
-	go.opencensus.io v0.19.3
-	golang.org/x/crypto v0.0.0-20190422183909-d864b10871cd
+	go.opencensus.io v0.21.0
+	golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5
+	golang.org/x/exp v0.0.0-20190221220918-438050ddec5e // indirect
 	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
 	golang.org/x/sync v0.0.0-20190423024810-112230192c58
-	golang.org/x/sys v0.0.0-20190422165155-953cdadca894
-	google.golang.org/api v0.3.2
+	golang.org/x/sys v0.0.0-20190606165138-5da285871e9c
+	google.golang.org/api v0.6.0
 	google.golang.org/appengine v1.6.1
-	google.golang.org/genproto v0.0.0-20190418145605-e7d98fc518a7
+	google.golang.org/genproto v0.0.0-20190530194941-fb225487d101
 	google.golang.org/grpc v1.20.1
 	gopkg.in/inf.v0 v0.9.1
 	gopkg.in/yaml.v2 v2.2.2
