@@ -164,6 +164,7 @@ require (
 	github.com/lib/pq v1.1.1
 	github.com/libvirt/libvirt-go v5.0.0+incompatible
 	github.com/libvirt/libvirt-go-xml v5.1.0+incompatible
+	github.com/lithammer/dedent v1.1.0 // indirect
 	github.com/logrusorgru/aurora v0.0.0-20181002194514-a7b3b318ed4e
 	github.com/lusis/go-artifactory v0.0.0-20160115162124-7e4ce345df82
 	github.com/magiconair/properties v1.7.6
