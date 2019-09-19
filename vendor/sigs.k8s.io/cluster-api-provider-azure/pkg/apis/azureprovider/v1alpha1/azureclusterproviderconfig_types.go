@@ -18,6 +18,7 @@ package v1alpha1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	kubeadmv1beta1 "k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta1"
 )
 
 // +genclient
@@ -32,9 +33,8 @@ type AzureClusterProviderSpec struct {
 	// NetworkSpec encapsulates all things related to Azure network.
 	NetworkSpec NetworkSpec `json:"networkSpec,omitempty"`
 
-	ResourceGroup        string `json:"resourceGroup"`
-	NetworkResourceGroup string `json:"networkResourceGroup"`
-	Location             string `json:"location"`
+	ResourceGroup string `json:"resourceGroup"`
+	Location      string `json:"location"`
 
 	// CAKeyPair is the key pair for CA certs.
 	CAKeyPair KeyPair `json:"caKeyPair,omitempty"`
@@ -56,6 +56,10 @@ type AzureClusterProviderSpec struct {
 	// this never changes until ca is rotated
 	// do not move to status, since it uses on disk ca certs, which causes issues during regeneration
 	DiscoveryHashes []string `json:"discoveryHashes,omitempty"`
+
+	// ClusterConfiguration holds the cluster-wide information used during a
+	// kubeadm init call.
+	ClusterConfiguration kubeadmv1beta1.ClusterConfiguration `json:"clusterConfiguration,omitempty"`
 }
 
 // KeyPair is how operators can supply custom keypairs for kubeadm to use.
@@ -80,7 +84,7 @@ func (kp *KeyPair) HasCertAndKey() bool {
 type NetworkSpec struct {
 	// Vnet configuration.
 	// +optional
-	Vnet VnetSpec `json:"vpc,omitempty"`
+	Vnet VnetSpec `json:"vnet,omitempty"`
 
 	// Subnets configuration.
 	// +optional
