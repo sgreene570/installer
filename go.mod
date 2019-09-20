@@ -7,7 +7,7 @@ require (
 	contrib.go.opencensus.io/exporter/ocagent v0.4.12 // indirect
 	github.com/Azure/azure-sdk-for-go v31.1.0+incompatible
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
-	github.com/Azure/go-autorest v11.7.0+incompatible
+	github.com/Azure/go-autorest/autorest v0.9.1 // indirect
 	github.com/DataDog/datadog-go v0.0.0-20180822151419-281ae9f2d895 // indirect
 	github.com/MakeNowJust/heredoc v1.0.0 // indirect
 	github.com/Netflix/go-expect v0.0.0-20190729225929-0e00d9168667
@@ -102,7 +102,6 @@ require (
 )
 
 replace (
-	github.com/Azure/go-autorest/autorest => github.com/Azure/go-autorest v13.0.1+incompatible
 	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.2.0
 	github.com/renstrom/dedent => github.com/lithammer/dedent v1.1.0
 	sigs.k8s.io/cluster-provider-aws => github.com/openshift/cluster-api-provider-aws v0.2.0
