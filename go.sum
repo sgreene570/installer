@@ -569,7 +569,6 @@ github.com/openshift/cluster-api-provider-libvirt v0.0.0-20190613141010-ecea5317
 github.com/openshift/cluster-api-provider-libvirt v0.0.0-20190613141010-ecea5317a4ab/go.mod h1:QWkLhwrk/ASksIKFa3lD2Vm+U0eFtzesFcUZdUu+GN0=
 github.com/openshift/library-go v0.0.0-20190129125304-4b9f6ceb6598 h1:eEFx4YmX068II6RrxHSBcU85zQiBgTHZm4t15fE01rg=
 github.com/openshift/library-go v0.0.0-20190129125304-4b9f6ceb6598/go.mod h1:NBttNjZpWwup/nthuLbPAPSYC8Qyo+BBK5bCtFoyYjo=
-github.com/openshift/machine-config-operator v3.11.0+incompatible h1:MaiPtKCsjeGt9UvbFT3gEgYf9ru1TBJ6uash8SePQQk=
 github.com/openzipkin/zipkin-go v0.1.1/go.mod h1:NtoC/o8u3JlF1lSlyPNswIbeQH9bJTmOf0Erfk+hxe8=
 github.com/openzipkin/zipkin-go v0.1.6/go.mod h1:QgAqvLzwWbR/WpD4A3cGpPtJrZXNIiJc5AZX7/PBEpw=
 github.com/pborman/uuid v0.0.0-20170612153648-e790cca94e6c/go.mod h1:VyrYX9gd7irzKovcSS6BIIEwPRkP2Wm2m9ufcdFSJ34=
@@ -971,7 +970,6 @@ k8s.io/cli-runtime v0.0.0-20190923161306-5a96b90764c8 h1:iVYuH/oQVnOh9Nr6y5AZRee
 k8s.io/cli-runtime v0.0.0-20190923161306-5a96b90764c8/go.mod h1:eF2knbzCHQ4V2lprgPOHejvS3d43jpDbNjN9cpqim98=
 k8s.io/client-go v0.0.0-20190923155754-2bd34d193bac/go.mod h1:D/1Tps6X8s8BMlqc5uhTjIUymrZ9AJqNc4nUpFrcf20=
 k8s.io/client-go v10.0.0+incompatible/go.mod h1:7vJpHMYJwNQCWgzmNV+VYUl1zCObLyodBc8nIyt8L5s=
-k8s.io/client-go v11.0.0+incompatible h1:LBbX2+lOwY9flffWlJM7f1Ct8V2SRNiMRDFeiwnJo9o=
 k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible h1:U5Bt+dab9K8qaUmXINrkXO135kA11/i5Kg1RUydgaMQ=
 k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible/go.mod h1:7vJpHMYJwNQCWgzmNV+VYUl1zCObLyodBc8nIyt8L5s=
 k8s.io/cluster-bootstrap v0.0.0-20190223141759-fab9a0a63c55/go.mod h1:iBSm2nwo3OaiuW8VDvc3ySDXK5SKfUrxwPvBloKG7zg=
@@ -1005,7 +1003,6 @@ k8s.io/kubelet v0.0.0-20190711112132-7f0a9f55a012/go.mod h1:Q+fm+P99V0BqqGXcLhcW
 k8s.io/kubernetes v1.13.3/go.mod h1:ocZa8+6APFNC2tX1DZASIbocyYT5jHzqFVsY5aoB7Jk=
 k8s.io/kubernetes v1.14.2 h1:Gdq2hPpttbaJBoClIanCE6WSu4IZReA54yhkZtvPUOo=
 k8s.io/kubernetes v1.14.2/go.mod h1:ocZa8+6APFNC2tX1DZASIbocyYT5jHzqFVsY5aoB7Jk=
-k8s.io/kubernetes v1.16.0 h1:WPaqle2JWogVzLxhN6IK67u62IHKKrtYF7MS4FVR4/E=
 k8s.io/utils v0.0.0-20190506122338-8fab8cb257d5 h1:VBM/0P5TWxwk+Nw6Z+lAw3DKgO76g90ETOiA6rfLV1Y=
 k8s.io/utils v0.0.0-20190506122338-8fab8cb257d5/go.mod h1:sZAwmy6armz5eXlNoLmJcl4F1QuKu7sr+mFQ0byX7Ew=
 k8s.io/utils v0.0.0-20190607212802-c55fbcfc754a/go.mod h1:sZAwmy6armz5eXlNoLmJcl4F1QuKu7sr+mFQ0byX7Ew=
@@ -1021,12 +1018,10 @@ rsc.io/binaryregexp v0.2.0/go.mod h1:qTv7/COck+e2FymRvadv62gMdZztPaShugOCi3I+8D8
 sigs.k8s.io/cluster-api v0.1.8-0.20190718211619-3cde5b4dd0d0/go.mod h1:MTxMmx3MSFZNi0RAjj64X+RurP9EEdhrRwLzdFZKTYw=
 sigs.k8s.io/cluster-api v0.2.0 h1:YjioPI9bdrJ6T2PFUHLfkG/+YdUth73SMIhp3YoONx8=
 sigs.k8s.io/cluster-api v0.2.0/go.mod h1:PQFa4RZOESzjF7B8pNOWJSVgUzdAdPbSmuFDz301sgI=
-sigs.k8s.io/cluster-api v0.2.2 h1:GaqDBc4RsN4ypCpCJ59kgT5ZxtqABKgJtCZVO0jLllo=
 sigs.k8s.io/cluster-api-provider-aws v0.4.0 h1:9uIqRkooAbWdxj5U0Pww3fu3TTwtm8u5+BKehkrPspI=
 sigs.k8s.io/cluster-api-provider-aws v0.4.0/go.mod h1:e5vlWKsw0dQve2djRNeY6B6SwNqPqutteo0q9kPgfzc=
 sigs.k8s.io/cluster-api-provider-azure v0.2.2 h1:FuTgaXTH3b+f3xxQtjaG7M6BGb+ohhuNVYrCA0kSydI=
 sigs.k8s.io/cluster-api-provider-azure v0.2.2/go.mod h1:LaotJPZHSy8BYVwR2UjkDah6tVdUAsgmqV6yxvZvQf8=
-sigs.k8s.io/cluster-api-provider-openstack v0.0.0-20190917144626-55baf50d47a7 h1:78LV7uqA76JIP8H2MCWWbUibocyb2XXRpOfddc7qX2Q=
 sigs.k8s.io/controller-runtime v0.1.12/go.mod h1:HFAYoOh6XMV+jKF1UjFwrknPbowfyHEHHRdJMf2jMX8=
 sigs.k8s.io/controller-runtime v0.2.0 h1:5gL30PXOisGZl+Osi4CmLhvMUj77BO3wJeouKF2va50=
 sigs.k8s.io/controller-runtime v0.2.0/go.mod h1:ZHqrRDZi3f6BzONcvlUxkqCKgwasGk5FZrnSv9TVZF4=

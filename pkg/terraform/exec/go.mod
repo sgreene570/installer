@@ -4,9 +4,6 @@ go 1.12
 
 require (
 	github.com/dimchansky/utfbom v1.1.0 // indirect
-	github.com/go-ini/ini v1.39.2 // indirect
-	github.com/golang/snappy v0.0.1 // indirect
-	github.com/googleapis/gax-go v2.0.2+incompatible // indirect
 	github.com/hashicorp/aws-sdk-go-base v0.3.0 // indirect
 	github.com/hashicorp/go-azure-helpers v0.3.2 // indirect
 	github.com/hashicorp/go-plugin v1.0.1-0.20190430211030-5692942914bb
@@ -15,13 +12,10 @@ require (
 	github.com/hashicorp/logutils v1.0.0
 	github.com/hashicorp/serf v0.0.0-20171022020050-c20a0b1b1ea9 // indirect
 	github.com/hashicorp/terraform v0.12.0-rc1
-	github.com/hashicorp/vault v1.1.2 // indirect
 	github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d // indirect
-	github.com/keybase/go-crypto v0.0.0-20190416182011-b785b22cc757 // indirect
 	github.com/lib/pq v1.1.1 // indirect
 	github.com/mitchellh/cli v1.0.0
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
-	github.com/pierrec/lz4 v0.0.0-20190501090746-d705d4371bfc // indirect
 	github.com/pkg/errors v0.8.0
 	github.com/spf13/afero v1.2.2 // indirect
 	github.com/vmihailenco/msgpack v4.0.4+incompatible // indirect
