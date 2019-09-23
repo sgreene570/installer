@@ -44,6 +44,7 @@ require (
 	github.com/openshift/client-go v0.0.0-20190806162413-e9678e3b850d
 	github.com/openshift/cloud-credential-operator v0.0.0-20190905120421-44ed18ef8496
 	github.com/openshift/cluster-api v0.0.0-20190619113136-046d74a3bd91
+	github.com/openshift/cluster-api-provider-aws v0.2.0 // indirect
 	github.com/openshift/cluster-api-provider-gcp v0.0.0-20190826205919-0cd5daa07e0d
 	github.com/openshift/cluster-api-provider-libvirt v0.0.0-20190613141010-ecea5317a4ab
 	github.com/openshift/library-go v0.0.0-20190129125304-4b9f6ceb6598
@@ -74,6 +75,7 @@ require (
 	k8s.io/utils v0.0.0-20190809000727-6c36bc71fc4a
 	sigs.k8s.io/cluster-api-provider-aws v0.4.0
 	sigs.k8s.io/cluster-api-provider-azure v0.2.2
+	sigs.k8s.io/cluster-api-provider-openstack v0.0.0-20190917144626-55baf50d47a7 // indirect
 )
 
 replace (
