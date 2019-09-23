@@ -8,36 +8,36 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceFile() *schema.Resource {
+func resourceFile() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceFileExists,
 		Read:   resourceFileRead,
 		Schema: map[string]*schema.Schema{
-			"filesystem": {
+			"filesystem": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"path": {
+			"path": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"content": {
+			"content": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				ForceNew: true,
 				MaxItems: 1,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"mime": {
+						"mime": &schema.Schema{
 							Type:     schema.TypeString,
 							Optional: true,
 							ForceNew: true,
 							Default:  "text/plain",
 						},
 
-						"content": {
+						"content": &schema.Schema{
 							Type:     schema.TypeString,
 							Required: true,
 							ForceNew: true,
@@ -45,24 +45,24 @@ func dataSourceFile() *schema.Resource {
 					},
 				},
 			},
-			"source": {
+			"source": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				ForceNew: true,
 				MaxItems: 1,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"source": {
+						"source": &schema.Schema{
 							Type:     schema.TypeString,
 							Optional: true,
 							ForceNew: true,
 						},
-						"compression": {
+						"compression": &schema.Schema{
 							Type:     schema.TypeString,
 							Optional: true,
 							ForceNew: true,
 						},
-						"verification": {
+						"verification": &schema.Schema{
 							Type:     schema.TypeString,
 							Optional: true,
 							ForceNew: true,
@@ -70,17 +70,17 @@ func dataSourceFile() *schema.Resource {
 					},
 				},
 			},
-			"mode": {
+			"mode": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,
 			},
-			"uid": {
+			"uid": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,
 			},
-			"gid": {
+			"gid": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,

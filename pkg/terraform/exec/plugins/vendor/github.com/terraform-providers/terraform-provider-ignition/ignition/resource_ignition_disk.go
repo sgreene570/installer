@@ -5,48 +5,48 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceDisk() *schema.Resource {
+func resourceDisk() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceDiskExists,
 		Read:   resourceDiskRead,
 		Schema: map[string]*schema.Schema{
-			"device": {
+			"device": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"wipe_table": {
+			"wipe_table": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 				ForceNew: true,
 			},
-			"partition": {
+			"partition": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
 				ForceNew: true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"label": {
+						"label": &schema.Schema{
 							Type:     schema.TypeString,
 							Optional: true,
 							ForceNew: true,
 						},
-						"number": {
+						"number": &schema.Schema{
 							Type:     schema.TypeInt,
 							Optional: true,
 							ForceNew: true,
 						},
-						"size": {
+						"size": &schema.Schema{
 							Type:     schema.TypeInt,
 							Optional: true,
 							ForceNew: true,
 						},
-						"start": {
+						"start": &schema.Schema{
 							Type:     schema.TypeInt,
 							Optional: true,
 							ForceNew: true,
 						},
-						"type_guid": {
+						"type_guid": &schema.Schema{
 							Type:     schema.TypeString,
 							Optional: true,
 							ForceNew: true,

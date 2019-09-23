@@ -5,37 +5,37 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceLink() *schema.Resource {
+func resourceLink() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceLinkExists,
 		Read:   resourceLinkRead,
 		Schema: map[string]*schema.Schema{
-			"filesystem": {
+			"filesystem": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"path": {
+			"path": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"target": {
+			"target": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"hard": {
+			"hard": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 				ForceNew: true,
 			},
-			"uid": {
+			"uid": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,
 			},
-			"gid": {
+			"gid": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,

@@ -5,17 +5,17 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceNetworkdUnit() *schema.Resource {
+func resourceNetworkdUnit() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceNetworkdUnitExists,
 		Read:   resourceNetworkdUnitRead,
 		Schema: map[string]*schema.Schema{
-			"name": {
+			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Required: true,
 				ForceNew: true,
 			},
-			"content": {
+			"content": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 				ForceNew: true,

@@ -5,7 +5,7 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 )
 
-func dataSourceSystemdUnit() *schema.Resource {
+func resourceSystemdUnit() *schema.Resource {
 	return &schema.Resource{
 		Exists: resourceSystemdUnitExists,
 		Read:   resourceSystemdUnitRead,
