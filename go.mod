@@ -3,55 +3,43 @@ module github.com/openshift/installer
 go 1.12
 
 require (
-	cloud.google.com/go v0.41.0
-	contrib.go.opencensus.io/exporter/ocagent v0.4.11
-	github.com/Azure/azure-sdk-for-go v29.0.0+incompatible
-	github.com/Azure/go-autorest v12.1.0+incompatible
-	github.com/BurntSushi/toml v0.3.1
-	github.com/ajeddeloh/go-json v0.0.0-20170920214419-6a2fe990e083
+	cloud.google.com/go v0.41.0 // indirect
+	github.com/Azure/azure-sdk-for-go v31.1.0+incompatible
+	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
+	github.com/Azure/go-autorest/autorest v0.9.1
+	github.com/Azure/go-autorest/autorest/azure/auth v0.3.0
+	github.com/Azure/go-autorest/autorest/to v0.3.0
+	github.com/Azure/go-autorest/autorest/validation v0.2.0 // indirect
+	github.com/MakeNowJust/heredoc v1.0.0 // indirect
+	github.com/Netflix/go-expect v0.0.0-20190729225929-0e00d9168667
+	github.com/Sirupsen/logrus v0.0.0-00010101000000-000000000000 // indirect
+	github.com/ajeddeloh/go-json v0.0.0-20170920214419-6a2fe990e083 // indirect
 	github.com/apparentlymart/go-cidr v1.0.0
 	github.com/awalterschulze/gographviz v0.0.0-20170410065617-c84395e536e1
-	github.com/aws/aws-sdk-go v1.16.14
-	github.com/census-instrumentation/opencensus-proto v0.2.0
+	github.com/aws/aws-sdk-go v1.20.19
 	github.com/containers/image v2.0.0+incompatible
-	github.com/coreos/go-semver v0.2.0
-	github.com/coreos/go-systemd v0.0.0-20181031085051-9002847aa142
+	github.com/coreos/go-systemd v0.0.0-20181031085051-9002847aa142 // indirect
 	github.com/coreos/ignition v0.26.0
-	github.com/davecgh/go-spew v1.1.1
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	github.com/dimchansky/utfbom v1.1.0
+	github.com/docker/docker v1.13.1 // indirect
+	github.com/exponent-io/jsonpath v0.0.0-20151013193312-d6023ce2651d // indirect
 	github.com/ghodss/yaml v1.0.0
-	github.com/gogo/protobuf v1.2.0
-	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+	github.com/go-openapi/spec v0.19.3 // indirect
 	github.com/golang/mock v1.3.1
-	github.com/golang/protobuf v1.3.1
-	github.com/google/btree v1.0.0
-	github.com/google/gofuzz v0.0.0-20170612174753-24818f796faf
-	github.com/google/uuid v1.0.0
-	github.com/googleapis/gnostic v0.2.0
-	github.com/gophercloud/gophercloud v0.2.0
+	github.com/gophercloud/gophercloud v0.3.0
 	github.com/gophercloud/utils v0.0.0-20190527093828-25f1b77b8c03
-	github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7
-	github.com/grpc-ecosystem/grpc-gateway v1.8.5
-	github.com/hashicorp/golang-lru v0.5.1
-	github.com/imdario/mergo v0.3.6
-	github.com/inconshreveable/mousetrap v1.0.0
-	github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af
-	github.com/json-iterator/go v1.1.5
-	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51
-	github.com/konsorten/go-windows-terminal-sequences v1.0.1
-	github.com/kr/fs v0.1.0
+	github.com/hinshun/vt10x v0.0.0-20180809195222-d55458df857c
+	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
+	github.com/kr/fs v0.1.0 // indirect
 	github.com/libvirt/libvirt-go v4.8.0+incompatible
-	github.com/mattn/go-colorable v0.0.9
-	github.com/mattn/go-isatty v0.0.4
-	github.com/mgutz/ansi v0.0.0-20170206155736-9520e82c474b
-	github.com/mitchellh/go-homedir v1.1.0
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
-	github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742
-	github.com/onsi/ginkgo v1.7.0 // indirect
-	github.com/onsi/gomega v1.4.3 // indirect
-	github.com/opencontainers/go-digest v1.0.0-rc1
-	github.com/opencontainers/image-spec v1.0.1
+	github.com/mattn/go-colorable v0.0.9 // indirect
+	github.com/mattn/go-isatty v0.0.4 // indirect
+	github.com/metal3-io/baremetal-operator v0.0.0-20190918171544-ac00ff5be28a
+	github.com/metal3-io/cluster-api-provider-baremetal v0.0.0-20190823184140-acab6c77caaa
+	github.com/mgutz/ansi v0.0.0-20170206155736-9520e82c474b // indirect
+	github.com/mitchellh/go-wordwrap v1.0.0 // indirect
+	github.com/onsi/ginkgo v1.8.0
+	github.com/onsi/gomega v1.5.0
+	github.com/opencontainers/image-spec v1.0.1 // indirect
 	github.com/openshift/api v0.0.0-20190806225813-d2972510af76
 	github.com/openshift/client-go v0.0.0-20190806162413-e9678e3b850d
 	github.com/openshift/cloud-credential-operator v0.0.0-20190905120421-44ed18ef8496
@@ -59,43 +47,36 @@ require (
 	github.com/openshift/cluster-api-provider-gcp v0.0.0-20190826205919-0cd5daa07e0d
 	github.com/openshift/cluster-api-provider-libvirt v0.0.0-20190613141010-ecea5317a4ab
 	github.com/openshift/library-go v0.0.0-20190129125304-4b9f6ceb6598
-	github.com/openshift/machine-config-operator v3.11.0+incompatible
-	github.com/pborman/uuid v0.0.0-20180906182336-adf5a7427709
-	github.com/petar/GoLLRB v0.0.0-20130427215148-53be0d36a84c
-	github.com/peterbourgon/diskv v2.0.1+incompatible
+	github.com/pborman/uuid v1.2.0
+	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/pkg/errors v0.8.1
 	github.com/pkg/sftp v1.10.0
-	github.com/pmezard/go-difflib v1.0.0
-	github.com/prometheus/client_golang v0.9.3-0.20190127221311-3c4408c8b829 // indirect
-	github.com/shurcooL/httpfs v0.0.0-20171119174359-809beceb2371
-	github.com/shurcooL/vfsgen v0.0.0-20181020040650-a97a25d856ca
-	github.com/sirupsen/logrus v1.2.0
-	github.com/spf13/cobra v0.0.3
-	github.com/spf13/pflag v1.0.3
+	github.com/russross/blackfriday v2.0.0+incompatible // indirect
+	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/sirupsen/logrus v1.3.0
+	github.com/smartystreets/goconvey v0.0.0-20190731233626-505e41936337 // indirect
+	github.com/spf13/cobra v0.0.5
 	github.com/stretchr/testify v1.3.0
 	github.com/vincent-petithory/dataurl v0.0.0-20160330182126-9a301d65acbb
-	go.opencensus.io v0.22.0
-	go4.org v0.0.0-20180809161055-417644f6feb5
-	golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5
-	golang.org/x/net v0.0.0-20190620200207-3b0461eec859
+	go4.org v0.0.0-20180809161055-417644f6feb5 // indirect
+	golang.org/x/crypto v0.0.0-20190611184440-5c40567a22f8
 	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
-	golang.org/x/sync v0.0.0-20190423024810-112230192c58
 	golang.org/x/sys v0.0.0-20190624142023-c5567b49c5d0
-	golang.org/x/text v0.3.2
-	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
 	google.golang.org/api v0.7.0
-	google.golang.org/appengine v1.6.1
-	google.golang.org/genproto v0.0.0-20190626174449-989357319d63
-	google.golang.org/grpc v1.21.1
 	gopkg.in/AlecAivazis/survey.v1 v1.8.1
-	gopkg.in/inf.v0 v0.9.1
 	gopkg.in/ini.v1 v1.41.0
 	gopkg.in/yaml.v2 v2.2.2
-	k8s.io/api v0.0.0-20190409021203-6e4e0e4f393b
-	k8s.io/apimachinery v0.0.0-20190404173353-6a84e37a896d
+	k8s.io/api v0.0.0-20190923155552-eac758366a00
+	k8s.io/apimachinery v0.0.0-20190923155427-ec87dd743e08
+	k8s.io/cli-runtime v0.0.0-20190923161306-5a96b90764c8 // indirect
 	k8s.io/client-go v11.0.1-0.20190409021438-1a26190bd76a+incompatible
-	k8s.io/klog v0.3.0
-	k8s.io/utils v0.0.0-20190506122338-8fab8cb257d5
-	sigs.k8s.io/controller-runtime v0.2.0-beta.2
-	sigs.k8s.io/yaml v1.1.0
+	k8s.io/kubernetes v1.14.2
+	k8s.io/utils v0.0.0-20190809000727-6c36bc71fc4a
+	sigs.k8s.io/cluster-api-provider-aws v0.4.0
+	sigs.k8s.io/cluster-api-provider-azure v0.2.2
+)
+
+replace (
+	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.2.0
+	github.com/renstrom/dedent => github.com/lithammer/dedent v1.1.0
 )
