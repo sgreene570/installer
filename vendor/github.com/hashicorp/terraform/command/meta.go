@@ -20,7 +20,6 @@ import (
 	"github.com/hashicorp/terraform/backend"
 	"github.com/hashicorp/terraform/backend/local"
 	"github.com/hashicorp/terraform/command/format"
-	"github.com/hashicorp/terraform/config/module"
 	"github.com/hashicorp/terraform/configs/configload"
 	"github.com/hashicorp/terraform/helper/experiment"
 	"github.com/hashicorp/terraform/helper/wrappedstreams"
@@ -257,7 +256,7 @@ func (m *Meta) StdinPiped() bool {
 }
 
 // RunOperation executes the given operation on the given backend, blocking
-// until that operation completes or is inteerrupted, and then returns
+// until that operation completes or is interrupted, and then returns
 // the RunningOperation object representing the completed or
 // aborted operation that is, despite the name, no longer running.
 //
@@ -405,15 +404,6 @@ func (m *Meta) extendedFlagSet(n string) *flag.FlagSet {
 	m.stateLock = true
 
 	return f
-}
-
-// moduleStorage returns the module.Storage implementation used to store
-// modules for commands.
-func (m *Meta) moduleStorage(root string, mode module.GetMode) *module.Storage {
-	s := module.NewStorage(filepath.Join(root, "modules"), m.Services)
-	s.Ui = m.Ui
-	s.Mode = mode
-	return s
 }
 
 // process will process the meta-parameters out of the arguments. This

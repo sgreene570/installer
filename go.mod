@@ -5,8 +5,11 @@ go 1.12
 require (
 	cloud.google.com/go v0.41.0 // indirect
 	contrib.go.opencensus.io/exporter/ocagent v0.4.12 // indirect
-	github.com/Azure/azure-sdk-for-go v26.7.0+incompatible
-	github.com/Azure/go-autorest v11.7.0+incompatible
+	github.com/Azure/azure-sdk-for-go v31.2.0+incompatible
+	github.com/Azure/go-autorest v13.0.1+incompatible // indirect
+	github.com/Azure/go-autorest/autorest v0.9.0
+	github.com/Azure/go-autorest/autorest/azure/auth v0.3.0
+	github.com/Azure/go-autorest/autorest/to v0.2.0
 	github.com/Netflix/go-expect v0.0.0-20190729225929-0e00d9168667 // indirect
 	github.com/Unknwon/com v0.0.0-20181010210213-41959bdd855f // indirect
 	github.com/apparentlymart/go-cidr v1.0.0
@@ -25,7 +28,7 @@ require (
 	github.com/gophercloud/utils v0.0.0-20190527093828-25f1b77b8c03
 	github.com/hashicorp/go-plugin v1.0.1-0.20190610192547-a1bc61569a26
 	github.com/hashicorp/logutils v1.0.0
-	github.com/hashicorp/terraform v0.12.2
+	github.com/hashicorp/terraform v0.12.7-0.20190801185734-d43fc71135dc
 	github.com/hinshun/vt10x v0.0.0-20180809195222-d55458df857c // indirect
 	github.com/json-iterator/go v1.1.7 // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
@@ -53,7 +56,6 @@ require (
 	github.com/pborman/uuid v1.2.0
 	github.com/pkg/errors v0.8.1
 	github.com/pkg/sftp v1.10.0
-	github.com/prometheus/client_golang v0.9.3-0.20190127221311-3c4408c8b829 // indirect
 	github.com/satori/uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.4.2
 	github.com/spf13/cobra v0.0.5
@@ -65,6 +67,7 @@ require (
 	github.com/terraform-providers/terraform-provider-local v1.2.1
 	github.com/terraform-providers/terraform-provider-openstack v1.21.1
 	github.com/terraform-providers/terraform-provider-random v2.0.0+incompatible
+	github.com/ugorji/go v1.1.2-0.20180831062425-e253f1f20942 // indirect
 	github.com/vincent-petithory/dataurl v0.0.0-20160330182126-9a301d65acbb
 	github.com/vmihailenco/msgpack v4.0.4+incompatible // indirect
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
