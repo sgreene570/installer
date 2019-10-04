@@ -939,8 +939,6 @@ github.com/terraform-providers/terraform-provider-local/local
 github.com/terraform-providers/terraform-provider-openstack/openstack
 # github.com/terraform-providers/terraform-provider-random v2.0.0+incompatible
 github.com/terraform-providers/terraform-provider-random/random
-# github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8
-github.com/ugorji/go/codec
 # github.com/ulikunitz/xz v0.5.5
 github.com/ulikunitz/xz
 github.com/ulikunitz/xz/internal/xlog

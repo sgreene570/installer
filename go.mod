@@ -67,7 +67,6 @@ require (
 	github.com/terraform-providers/terraform-provider-local v1.2.1
 	github.com/terraform-providers/terraform-provider-openstack v1.21.1
 	github.com/terraform-providers/terraform-provider-random v2.0.0+incompatible
-	github.com/ugorji/go v1.1.2-0.20180831062425-e253f1f20942 // indirect
 	github.com/vincent-petithory/dataurl v0.0.0-20160330182126-9a301d65acbb
 	github.com/vmihailenco/msgpack v4.0.4+incompatible // indirect
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
